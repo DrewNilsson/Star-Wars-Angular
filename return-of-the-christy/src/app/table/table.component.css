@@ -100,4 +100,9 @@
   .row {
     display: flex;
     gap: 4px;
+    border-top: 2px grey;
+  }
+
+  .expandedHeader {
+    font-weight: bold;
   }

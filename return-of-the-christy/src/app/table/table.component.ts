@@ -41,6 +41,8 @@ export class TableComponent {
   expandedColumns: string[] = [];
 
   public _array = Array;
+  public _number = Number;
+  public _string = String;
 
   columnsToDisplayWithExpand: string[] = [];
   expandedRow: PeopleApi | PlanetsApi | StarshipsApi | null | undefined;
@@ -56,7 +58,7 @@ export class TableComponent {
   @ViewChild(MatSort)
   sort!: MatSort;
 
-  constructor(private _httpClient: HttpClient) {}
+  constructor(private _httpClient: HttpClient) { }
 
   ngAfterViewInit() {
     this.columnsToDisplayWithExpand = [...this.displayedColumns];
@@ -154,21 +156,21 @@ export interface StarshipsApi {
 
 export interface Starship {
   name: string;
-			model: string;
-			manufacturer: string;
-			cost_in_credits: string;
-			length: string;
-			max_atmosphering_speed: string;
-			crew: string;
-			passengers: string;
-			cargo_capacity: string;
-			consumables: string;
-			hyperdrive_rating: string;
-			MGLT: string;
-			starship_class: string;
-			pilots: Array<string>;
-			films: Array<string>;
-			created: string;
-			edited: string;
-			url: string;
+  model: string;
+  manufacturer: string;
+  cost_in_credits: string;
+  length: string;
+  max_atmosphering_speed: string;
+  crew: string;
+  passengers: string;
+  cargo_capacity: string;
+  consumables: string;
+  hyperdrive_rating: string;
+  MGLT: string;
+  starship_class: string;
+  pilots: Array<string>;
+  films: Array<string>;
+  created: string;
+  edited: string;
+  url: string;
 }
