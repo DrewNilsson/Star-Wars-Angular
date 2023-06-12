@@ -1,0 +1,22 @@
+<mat-tab-group color="ThemePalette" animationDuration="2000ms">
+    <mat-tab label="People">
+        <app-table 
+            [title]="'people'" 
+            [displayedColumns]="['name', 'birth_year', 'gender', 'height', 'mass']"
+            [expandedColumns]="['homeworld', 'species', 'films', 'starships', 'vehicles']">
+        </app-table>
+    </mat-tab>
+    <mat-tab label="Planets">
+        <app-table 
+            [title]="'planets'" 
+            [displayedColumns]="['name', 'population', 'terrain', 'climate', 'surface_water', 'rotation_period', 'orbital_period']"
+            [expandedColumns]="['diameter', 'gravity', 'films']">
+        </app-table>
+    </mat-tab>
+    <mat-tab label="Starships">
+        <app-table 
+            [title]="'starships'" 
+            [displayedColumns]="['manufacturer', 'model', 'starship_class', 'cost_in_credits', 'crew', 'passengers', 'cargo_capacity']">
+        </app-table>
+    </mat-tab>
+</mat-tab-group>
